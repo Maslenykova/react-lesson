@@ -1,0 +1,13 @@
+{
+    
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "targets": " last 2 versions, > 1%"
+            }
+          ]
+        ],
+      
+    "plugins": [ "@babel/plugin-transform-react-jsx"]
+}
