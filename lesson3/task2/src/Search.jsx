@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import "./search.scss"
 
-const Search = (props) =>{
+
+const rootElem = document.querySelector('#root');
+
+export const Search = (props) =>{
     return (
         <div className="search">
           <h1 className="search__title">{`Hello, ${props.name}. What to search for you?`}</h1>
@@ -16,5 +19,6 @@ const Search = (props) =>{
        
 }
 
-export default Search;
 
+
+ReactDOM.render(<Search name="Tom"/>, rootElem);
