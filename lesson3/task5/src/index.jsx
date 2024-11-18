@@ -12,6 +12,6 @@ const userData = {
   };
 
 ReactDOM.render(
-    <Profile user={userData} />,
+    <Profile user={userData} birthDate='1991-01-17T11:11:11.819Z'/>,
     rootElem
   );

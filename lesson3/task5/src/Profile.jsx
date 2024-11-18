@@ -3,13 +3,12 @@ import './index.scss';
 import moment from 'moment';
 
 
-const formatDate = date => moment(date).format('DD MMM YYYY');
-
 function Profile(props) {
+  const day = moment(props.birthDate).format('DD MMM YYYY');
   return (
     <div className="profile">
      <div className='profile__name'>{`${props.user.firstName} ${props.user.lastName}`}</div>
-      <div className="profile__birth">{`Was born ${formatDate(props.date)} in London`}</div>
+      <div className="profile__birth">{`Was born ${day} in London`}</div>
     </div>
   );
 }
