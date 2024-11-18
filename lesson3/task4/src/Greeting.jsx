@@ -11,12 +11,12 @@ const calculateAge = (birthDate) => {
   return isBeforeBirthdayThisYear ? age - 1 : age;
 };
 
-const Greeting = (props) => {
-  const age = calculateAge(props.user.birthDate);
+const Greeting = ({ firstName, lastName, birthDate }) => {
+  const age = calculateAge(birthDate);
 
   return (
     <div className="greeting">
-      {`My name is ${props.user.firstName} ${props.user.lastName}. I am ${age} years old.`}
+      {`My name is ${firstName} ${lastName}. I am ${age} years old.`}
     </div>
   );
 };

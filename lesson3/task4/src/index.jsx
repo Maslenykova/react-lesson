@@ -11,6 +11,6 @@ const userInfo = {
 };
 
 ReactDOM.render(
-    <Greeting user = {userInfo}/>,
+    <Greeting firstName="John" lastName="Doe" birthDate="2002-06-19" />,
     rootElem
   );
