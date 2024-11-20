@@ -3,8 +3,7 @@ import './index.scss';
 
 class GoodButton extends React.Component {
 handleClick(event){
-    console.log(event.target.textContent);
-    alert('Good job!');
+    alert(event.target.textContent);
 }
     render(){
     return(<button className="fancy-button"
