@@ -5,7 +5,7 @@ const Info = ({text}) => {
         return null;
     }
     return(
-       <div className="message">{text}</div>
+       <div className="info">{text}</div>
     )
 }
 
