@@ -2,7 +2,7 @@ import React from "react";
 
 const UserGreeting = () =>{
    return(
-    <h1>Hi user, 😎</h1>
+    <h1>Hello, user 😎</h1>
    ) 
 };
 
