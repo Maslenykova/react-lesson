@@ -8,18 +8,27 @@ class Status extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        isOnline: false || true, 
+        isOnline: false,
       };
     }
   
+    reconnect = () => {
+      this.setState({ isOnline: true });
+    };
+  
+    disconnect = () => {
+      this.setState({ isOnline: false });
+    };
+  
     render() {
-//    if(this.state.isOnline === true){
-//            return (<Online/>)
-//     }  
-//    return (<Offline/>) 
-   const { isOnline } = this.state; 
-   return isOnline ? <Online /> : <Offline />;
- }
+      const { isOnline } = this.state;
+  
+      return (
+        <div>
+          {isOnline ? <Online /> : <Offline reconnect={this.reconnect} />}
+        </div>
+      );
+    }
   }
   
   export default Status;
