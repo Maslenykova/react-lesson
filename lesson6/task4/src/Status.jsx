@@ -8,7 +8,7 @@ class Status extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        isOnline: false, 
+        isOnline: false || true, 
       };
     }
   
