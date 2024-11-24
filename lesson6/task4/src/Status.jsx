@@ -3,20 +3,28 @@ import Online from './Online';
 import Offline from './Offline';
 
 
+
 class Status extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isOnline: true,
-        };
+    constructor(props) {
+      super(props);
+      this.state = {
+        isOnline: true, 
+      };
     }
-
-    // reconnect = () => {
-    //     this.setState({ isOnline: true }); 
-    //   };
-
-render(){
-    return(this.state.isOnline !== true ? <Offline /> : <Online />)
-}
-}
-export default Status;
+  
+    reconnect = () => {
+      this.setState({ isOnline: true }); 
+    };
+  
+    render() {
+      const { isOnline } = this.state;
+  
+      return isOnline ? (
+        <Online />
+      ) : (
+        <Offline onReconnect={this.reconnect} />
+      );
+    }
+  }
+  
+  export default Status;
