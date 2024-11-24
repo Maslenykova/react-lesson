@@ -8,17 +8,16 @@ class Status extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        isOnline: true || false , 
+        isOnline: false || true , 
       };
     }
   
-  
     render() {
-if(this.state.isOnline !== true){
-   return (<Offline/>)
-}  
-return (<Online/>)  
-}
+   if(this.state.isOnline === true){
+           return (<Online/>)
+    }  
+   return (<Offline/>)  
+ }
   }
   
   export default Status;
