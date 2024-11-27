@@ -5,13 +5,12 @@ import moment from 'moment';
 const Transaction = ({ from, to, amount, time, rate }) => {
   const formatDate = time => moment(time).format('DD MMM YYYY');
   const formatTime = time => moment(time).format('HH:mm');
-  const formattedAmount = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+  const formattedAmount = new Intl.NumberFormat('en-GB', {
+    // style: 'currency',
+    // currency: 'GBP',
     maximumFractionDigits: 0,
   }).format(amount);
 
-  console.log(formattedAmount);
 
   return (
     <li className="transaction">
