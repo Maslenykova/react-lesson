@@ -25,7 +25,7 @@ componentWillUnmount(){
         width: innerWidth,
         height: innerHeight,
     })
-    document.title = `${innerWidth} x ${innerHeight}`;
+    document.title = `${innerWidth}px - ${innerHeight}px`;
 }
 
     render(){
