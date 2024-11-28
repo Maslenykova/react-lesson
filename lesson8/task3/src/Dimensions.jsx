@@ -9,6 +9,7 @@ constructor(props){
         width: innerWidth,
         height: innerHeight,
     }
+    document.title = `${innerWidth}px - ${innerHeight}px`;
 };
 
 componentDidMount(){
@@ -25,7 +26,7 @@ componentWillUnmount(){
         width: innerWidth,
         height: innerHeight,
     })
-    document.title = `${innerWidth}px - ${innerHeight}px`;
+    
 }
 
     render(){
