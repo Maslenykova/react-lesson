@@ -10,7 +10,7 @@ class ConnectionStatus extends Component{
     }
     componentWillUnmount(){
         window.removeEventListener('offline', this.handleOffline);
-        window.removeEventListenerr('online', this.handleOnline);
+        window.removeEventListener('online', this.handleOnline);
     }
     handleOffline = () => {
         this.setState({ online: false }); 
