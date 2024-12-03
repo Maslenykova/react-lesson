@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 class Filter extends Component {
   handleChange = (event) => {
-    const { onChange } = this.props; 
-    onChange(event.target.value); 
+    this.props.onChange(event.target.value); 
   };
 
   render() {
