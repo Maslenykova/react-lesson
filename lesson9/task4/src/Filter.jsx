@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 
 class Filter extends Component {
- 
-  state = { value: '' };
-
   handleChange = (event) => {
     const { onChange } = this.props; 
-    const newValue = event.target.value; 
-
-    this.setState({ value: newValue }); 
-    onChange(newValue); 
+    onChange(event.target.value); 
   };
 
   render() {
-    const { count } = this.props; 
-    const { value } = this.state; 
+    const { count, filterText } = this.props; 
 
     return (
       <div className="filter">
@@ -23,7 +16,7 @@ class Filter extends Component {
           type="text"
           className="filter__input"
           onChange={this.handleChange} 
-          value={value} 
+          value={filterText} 
         />
       </div>
     );
