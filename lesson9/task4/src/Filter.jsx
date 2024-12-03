@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Filter = ({ filterText, count, onChange }) => {
   const handleChange = (event) => {
     onChange(event.target.value); 

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import Filter from './Filter';
 import User from './User';
+import Filter from './Filter';
 
 class UsersList extends Component {
   state = {
-    filterText: '',
+    filterText: '', 
   };
 
   handleFilterChange = (filterText) => {
-    this.setState({ filterText });
+    this.setState({ filterText }); 
   };
 
   render() {
-    const { users } = this.props; 
-    const { filterText } = this.state; 
+    const { users } = this.props;
+    const { filterText } = this.state;
 
-    const filteredUsers = users.filter(user =>
+    const filteredUsers = users.filter((user) =>
       user.name.toLowerCase().includes(filterText.toLowerCase())
     );
 
@@ -23,11 +23,11 @@ class UsersList extends Component {
       <div>
         <Filter
           filterText={filterText}
-          count={filteredUsers.length}
+          count={filteredUsers.length} 
           onChange={this.handleFilterChange} 
         />
         <ul className="users">
-          {filteredUsers.map(user => (
+          {filteredUsers.map((user) => (
             <User key={user.id} {...user} />
           ))}
         </ul>
