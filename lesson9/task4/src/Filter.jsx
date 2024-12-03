@@ -1,27 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Filter extends Component {
-  handleChange = (event) => {
-    const { onChange } = this.props; 
-    const newValue = event.target.value;
-    onChange(newValue);
+const Filter = ({ filterText, count, onChange }) => {
+  const handleChange = (event) => {
+    onChange(event.target.value); 
   };
 
-  render() {
-    const { count, filterText } = this.props; 
-
-    return (
-      <div className="filter">
-        <span className="filter__count">{count}</span>
-        <input
-          type="text"
-          className="filter__input"
-          onChange={this.handleChange} 
-          value={filterText}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="filter">
+      <span className="filter__count">{count}</span>
+      <input
+        type="text"
+        className="filter__input"
+        onChange={handleChange} 
+        value={filterText} 
+      />
+    </div>
+  );
+};
 
 export default Filter;
