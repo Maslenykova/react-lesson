@@ -6,9 +6,9 @@ class Filter extends Component {
 
   handleChange = (event) => {
     const { onChange } = this.props; 
-    const newValue = event.target.value; /
+    const newValue = event.target.value; 
 
-    this.setState({ value: newValue }); /
+    this.setState({ value: newValue }); 
     onChange(newValue); 
   };
 
