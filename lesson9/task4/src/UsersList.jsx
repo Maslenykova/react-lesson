@@ -17,7 +17,7 @@ class UsersList extends Component {
 
     const filteredUsers = users.filter(user =>{
       if(user.name.toLowerCase() === filterText.toLowerCase()){
-        return filterText;
+        return user.name;
       }
          return null;
     }
@@ -26,17 +26,18 @@ class UsersList extends Component {
 
     return (
       <div>
-        <Filter
-          filterText={filterText}
-          count={filteredUsers.length}
-          onChange={this.handleFilterChange}
-        />
-        <ul className="users">
-          {filteredUsers.map(user => (
-            <User key={user.id} {...user} />
-          ))}
-        </ul>
-      </div>
+
+      <Filter
+        filterText={filterText}
+        count={filteredUsers.length}
+        onChange={this.handleFilterChange}
+      />
+      <ul className="users">
+        {this.props.users.map(user => (
+          <User key={user.id} {...user} />
+        ))}
+      </ul>
+    </div>
     );
   }
 }
