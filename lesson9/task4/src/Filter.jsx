@@ -7,9 +7,7 @@ const Filter = ({ filterText, count, onChange }) => {
       <input
         type="text"
         className="filter__input"
-        onChange={ (event) => {
-            onChange(event.target.value); 
-          }} 
+        onChange={ onChange} 
         value={filterText} 
       />
     </div>
