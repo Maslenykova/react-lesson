@@ -7,8 +7,8 @@ import './index.scss'
 class App extends Component {
   state = {
     userData: {
-      firstName: 'Tom',
-      lastName: 'Ford',
+      firstName: 'John',
+      lastName: 'Doe',
     }
   };
 handleChange = event => {
