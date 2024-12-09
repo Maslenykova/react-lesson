@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-const CardTitle = ({userName, count}) =>{
+const CartTitle = ({userName, count}) =>{
     return(
         <div className="cart-title">{`${userName}, you added ${count} items`}</div>
     )
 }
 
-export default CardTitle;
+export default CartTitle;
