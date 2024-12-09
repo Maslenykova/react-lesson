@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import CardTitle from './CardTitle';
-import ProductaList from './ProductsList';
+import CartTitle from './CardTitle';
+import ProductsList from './ProductsList';
 
 
 class ShoppingCart extends Component{
@@ -21,10 +21,10 @@ class ShoppingCart extends Component{
             const count = this.state.cartItems.length;
         return(
             <div className="column">
-                <CardTitle 
+                <CartTitle 
                 userName={this.props.userData.firstName}
                 count={count}/>
-                <ProductaList cartItems={this.state.cartItems}/>
+                <ProductsList cartItems={this.state.cartItems}/>
             </div>
         )
     }
