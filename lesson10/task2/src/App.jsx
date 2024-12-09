@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     userData: {
       firstName: 'Tom',
-      lastName: 'Fort',
+      lastName: 'Ford',
     }
   };
 handleChange = event => {

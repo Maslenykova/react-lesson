@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CartTitle from './CardTitle';
+import CartTitle from './CartTitle';
 import ProductsList from './ProductsList';
 
 
