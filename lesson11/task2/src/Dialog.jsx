@@ -24,6 +24,6 @@ Dialog.propTypes = {
 }
 Dialog.defaultProps = {
     isOpen: false,
-    title: ""
+    title: ''
 }
 export default Dialog;
