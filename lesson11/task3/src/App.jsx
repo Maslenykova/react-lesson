@@ -6,18 +6,27 @@ class App extends Component {
     isOpen: false,
   };
 
-  handleToggle = () => {
-    this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
-    }));
+  handleOpen = () => {
+    this.setState({
+      isOpen: true,
+    });
   };
+
+  handleClose = () => {
+    this.setState({
+      isOpen: false,
+    });
+  };
+
 
  render(){
   return (
     <div className="expand__content">
      <Expand title='Some title'
        isOpen={this.state.isOpen}
-       onToggle={this.handleToggle}>
+       onOpen={this.handleOpen}
+       onClose={this.handleClose}
+       >
      <p>
         Hooks are a new addition in React 16.8. They let you use state and other React features
         without writing a class.
