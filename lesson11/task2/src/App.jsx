@@ -1,41 +1,27 @@
-import React, { Component } from 'react';
-import Dialog from './Dialog';
+import React, { useState } from 'react';
+import Expand from './Expand';
 
-class App extends Component {
-  state = {
-    isOpen: false,
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleExpand = () => {
+    setIsOpen(!isOpen);
   };
 
-  hideDialog = () => {
-    this.setState({
-      isOpen: false,
-    });
-  };
-
-  showDialog = () => {
-    this.setState({
-      isOpen: true,
-    });
-  };
-
-  render() {
-    return (
-      <div className="app">
-        <button className="btn" onClick={this.showDialog}>
-          Show dialog
-        </button>
-        <Dialog
-          isOpen={this.state.isOpen}
-          onClose={this.hideDialog}
-          title="Recommendation"
-        >
-          <p>
-            Use immutable array methods to work with data. It will help to avoid bugs
-          </p>
-        </Dialog>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="app">
+      <Expand
+        title="More information"
+        isOpen={isOpen}
+        onToggle={toggleExpand}
+      >
+        <p>
+          React hooks are a new addition in React 16.8. They let you use state and other React
+          features without writing a class.
+        </p>
+      </Expand>
+    </div>
+  );
+};
 
 export default App;
