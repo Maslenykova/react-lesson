@@ -5,13 +5,13 @@ import Products from "./Products";
 
 const App = () => {
     return(
-        <div class="page">
+        <div className="page">
             <BrowserRouter>
-                <ul class="navigation">
-                   <li class="navigation__item">
+                <ul className="navigation">
+                   <li className="navigation__item">
                 <Link to='/'>Home</Link>
                   </li>
-                  <li class="navigation__item">
+                  <li className="navigation__item">
                   <Link to='/products'>Products</Link>
                  </li>
                  </ul>
